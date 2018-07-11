@@ -1,0 +1,24 @@
+<!--Una template JINJA2 per una form HTML 5 che permetta di
+scegliere una città dalla lista citta di
+dict {codice, nome} (presente come parametro) e 
+una data (formato gg/mm/aaaa) e invi i dati all’URL
+’/telefonateCittaData’. -->
+
+<html>
+    <head></head>
+    <body>
+        <h1>Esame 06/02/2017</h1>
+        <form action="/telefonataCittaData" method="get">
+            <select name ="citta">
+                {%for i in lista%}
+                <option value="{{i.codice}}">
+                    {{i.nome}}
+                </option>
+                {%endfor%}
+            </select>
+            <input type="date" name="dataEasy"/>
+            <input type="text" name="data" pattern="[0-9]{1,2}/[0-9]{1,2}/[0-9]{4}"/>
+            <input type="submit" value="Invia" name="send"/>
+        </form>
+    </body>
+</html>

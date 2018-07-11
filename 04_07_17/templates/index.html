@@ -1,0 +1,17 @@
+
+<html>
+    <head></head>
+    <body>
+        <form action="/prestitiUtente" method="get">
+            <input type="text" name="codF" pattern="[a-zA-Z]{6}[0-9]{2}[a-zA-Z]{1}[0-9]{2}[a-zA-Z]{1}[0-9]{3}[a-zA-Z]{1}"/>
+            <select name="biblio">
+                {%for i in lista%}
+                <option name="{{i.id}}">
+                    {{i.nome}}
+                </option>
+                {%endfor%}
+            </select>
+            <input type="submit" name="invia" value="Send"/>
+        </form>
+    </body>
+</html>
