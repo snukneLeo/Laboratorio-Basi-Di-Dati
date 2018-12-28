@@ -1,0 +1,15 @@
+\encoding UTF8
+---------------------------- ESERCIZO 3 ----------------------------
+-- DA SISTEMARE!!!!!!!!!!!!!!!!!!!!!!!!!!
+SELECT DISTINCT P.ID, P.COGNOME, P.NOME
+FROM PERSONA P
+	JOIN DOCENZA D ON D.ID_PERSONA = P.ID
+    JOIN INSEROGATO IE ON IE.ID = D.ID_INSEROGATO
+WHERE P.ID IN(SELECT D.ID_PERSONA
+			  FROM DOCENZA D
+				JOIN INSEROGATO IE ON IE.ID = D.ID_INSEROGATO
+              	JOIN INSEGN I ON I.ID = IE.ID_INSEGN
+			  WHERE IE.ANNOACCADEMICO = '2010/2011')
+              	
+             
+ORDER BY P.ID;

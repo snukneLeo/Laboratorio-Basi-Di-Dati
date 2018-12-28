@@ -1,0 +1,12 @@
+<form action="/prestitiUtente" method="get">
+    <label>Codice Fiscale: </label>
+    <input type="text", name="utente" pattern="[A-Z]....."/> 
+    <!-- vedi prima le reg exp-->
+    <label>Biblioteca: </label>
+    <select name="biblio">
+        {% for b in biblioteche %}
+        <option value="{{b.id}}" >{{b.nome}}</option>
+        {% endfor %}
+    </select>
+    <input type="submit" value="Invia"/>
+</form>

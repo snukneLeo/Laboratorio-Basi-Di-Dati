@@ -1,0 +1,22 @@
+//metodo d'istanza
+def equal (self,p):
+  if self == p:
+    return true
+  else:
+    return false
+
+
+//metodo di classe
+@classmethod
+def mode(cls,a,b):
+  ....
+
+//definizione di classe
+class A (pippo): //pippo classe deriavnte A classe figlia
+  def int():
+    print("ciao")
+
+  def __init__(self):
+    self.attri = "10"
+    self.attri = "ciao"
+    ...

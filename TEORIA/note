@@ -1,0 +1,12 @@
+template1 si copia ogni volta che si crea un nuovo database
+se ho tabelle dentro template1 queste
+si copieranno tutte le tabelle in ogni database
+creato
+
+postgres --> admin
+
+did2014  --> server della didattica fino al 2014
+\dt -> tabelle create
+\d reparto -> vincoli che ho nelle tabelle con l'attributo reparto
+
+edit-> apre un note
